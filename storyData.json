@@ -23,6 +23,7 @@
       "buttonText": "Who?"
     },
     {
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "<P>A damned famous scientist - pioneered research on mechanical instruments. More importantly, a friend of yours.<br><br> <em>Vaughn sounded vaguely familar and yet you could not put a pin on it<em><p>",
       "action": "continue"
     },

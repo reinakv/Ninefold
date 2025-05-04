@@ -5,25 +5,18 @@ let decisionWeights = [2, 3, 1, 2, 3];
 let currentDecision = 0;
 let currentPlotline = 'intro';
 
-// Load story data
-fetch('storyData.json')
-  .then(res => res.json())
-  .then(data => {
-    story = data;
-
-    const saved = JSON.parse(localStorage.getItem('ninefold-progress'));
-    if (saved) {
-      currentIndex = saved.currentIndex;
-      currentPlotline = saved.currentPlotline;
-      decisions = saved.decisions || [];
-      currentDecision = saved.currentDecision;
-    }
-
-    showNextScene();
-  });
+function loadProgress() {
+  const saved = JSON.parse(sessionStorage.getItem('ninefold-progress'));
+  if (saved) {
+    currentIndex = saved.currentIndex;
+    currentPlotline = saved.currentPlotline;
+    decisions = saved.decisions || [];
+    currentDecision = saved.currentDecision;
+  }
+}
 
 function saveProgress() {
-  localStorage.setItem('ninefold-progress', JSON.stringify({
+  sessionStorage.setItem('ninefold-progress', JSON.stringify({
     currentIndex,
     currentPlotline,
     decisions,
@@ -32,28 +25,34 @@ function saveProgress() {
 }
 
 function resetStory() {
-  localStorage.removeItem('ninefold-progress');
+  sessionStorage.removeItem('ninefold-progress');
   location.reload();
 }
+
+// Load story data
+fetch('storyData.json')
+  .then(res => res.json())
+  .then(data => {
+    story = data;
+    loadProgress();
+    showNextScene();
+  });
 
 function showNextScene() {
   const plot = story[currentPlotline];
   const scene = plot[currentIndex];
   if (!scene) return;
 
-  // Set background
   if (scene.background) {
     document.getElementById('background').src = scene.background;
   }
 
-  // Replace text
   let text = scene.text;
   if (scene.showRoll && typeof window.lastRawRoll !== 'undefined') {
     text = text.replace('{roll}', window.lastRawRoll);
   }
   document.getElementById('text-box').innerHTML = text;
 
-  // Handle optional image
   const sceneImage = document.getElementById('scene-image');
   if (scene.image) {
     sceneImage.src = scene.image;
@@ -70,9 +69,9 @@ function showNextScene() {
     sceneImage.style.display = 'none';
   }
 
-  // Setup continue or redirect
   const choices = document.getElementById('choices');
   choices.innerHTML = '';
+
   if (scene.action === 'continue' || scene.action === 'redirect') {
     const btn = document.createElement('button');
     btn.textContent = scene.buttonText || 'Continue';
@@ -100,7 +99,6 @@ function showDecisionChoices(decisionKey) {
   document.getElementById('text-box').innerText = '';
   choicesContainer.innerHTML = '';
 
-  // Auto-roll-based decisions (no player alignment choice)
   if (decision.mapping) {
     const rawRoll = rollRawDice();
     const simplifiedRoll = simplifyRawRoll(rawRoll);
@@ -110,7 +108,7 @@ function showDecisionChoices(decisionKey) {
     currentIndex = 0;
     currentPlotline = nextPlotline;
 
-    decisions.push({ alignment: 0, outcome: simplifiedRoll }); // Default to Neutral
+    decisions.push({ alignment: 0, outcome: simplifiedRoll });
     currentDecision++;
     saveProgress();
     updateDecisionList();
@@ -118,7 +116,6 @@ function showDecisionChoices(decisionKey) {
     return;
   }
 
-  // Player chooses alignment → then dice roll determines outcome
   decision.choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.textContent = choice.label;
@@ -234,7 +231,7 @@ function updateDecisionList() {
   };
 
   decisions.forEach((decision, index) => {
-    if (decision && typeof decision.alignment === 'number' && typeof decision.outcome === 'number') {
+    if (typeof decision.alignment === 'number' && typeof decision.outcome === 'number') {
       const li = document.createElement('li');
       li.textContent = `Decision ${index + 1}: ${alignmentLabels[decision.alignment]} ${outcomeLabels[decision.outcome]}`;
       choicesList.appendChild(li);
