@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ninefold – Prologue</title>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+    
+  <style>
+    .lavishly-yours-regular {
+        font-family: "Lavishly Yours", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    }
+    body {
+      margin: 0;
+      font-family: "Lavishly Yours", cursive;
+      background-color: #0d2b45;
+      color: #ffecd6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .screen {
+      display: none;
+      text-align: center;
+      max-width: 700px;
+      padding: 2rem;
+    }
+    .screen.active {
+      display: block;
+    }
+    h1, h2, p {
+      margin-bottom: 1.5rem;
+    }
+    h1{
+        font-size: 100px;
+        font-weight: normal;
+    }
+    h2{
+        font-weight: normal;
+        font-size: 60px;
+    }
+    p{
+        font-family: "Montserrat", sans-serif;
+    }
+    button {
+      background-color: #4a7c70;
+      color: #ffecd6;
+      border: none;
+      font-family: "Montserrat", sans-serif;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #3a635a;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="screen1" class="screen active">
+    <h1>Welcome to Ninefold</h1>
+    <p>Fate isn't what you think it is.</p>
+    <button onclick="nextScreen()">Continue</button>
+  </div>
+
+  <div id="screen2" class="screen">
+    <h2>The Rules Are Simple</h2>
+    <p>You will face decisions. Each time, choose one of three paths</p>
+    <p>Your fate will then be decided by chance — a roll of the dice</p>
+    <p>Choices are yours. Consequences are not.</p>
+    <button onclick="nextScreen()">Continue</button>
+  </div>
+
+  <div id="screen3" class="screen">
+    <h2>Some truths are better left buried.</h2>
+    <p>But you're already in too deep.</p>
+    <button onclick="startGame()">Let’s Play</button>
+  </div>
+
+  <script>
+    let currentScreen = 1;
+    function nextScreen() {
+      document.getElementById(`screen${currentScreen}`).classList.remove('active');
+      currentScreen++;
+      document.getElementById(`screen${currentScreen}`).classList.add('active');
+    }
+
+    function startGame() {
+      window.location.href = 'ninefold.html';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

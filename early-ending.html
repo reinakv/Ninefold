@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ninefold — Early Ending</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0d2b45;
+      color: #ffecd6;
+    }
+
+    #background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    #overlay {
+      position: relative;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    #scene-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border: 2px solid #ffaa5e;
+      border-radius: 8px;
+    }
+
+    #popup-box {
+      display: none;
+      background-color: #203c56;
+      border: 1px solid #ffd4a3;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    #text-box {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    #choices button {
+      background-color: #d08159;
+      color: #0d2b45;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #choices-list {
+      margin-top: 2rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    #choices-list li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    #dice-area {
+      text-align: center;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <img id="background" src="" alt="Background"style="display:none;" />
+
+  <div id="overlay">
+    <div id="text-box"></div>
+
+    <div id="choices"></div>
+
+
+    <ul id="choices-list"></ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const alignmentLabels = {
+      '-1': 'Chaotic',
+      '0': 'Neutral',
+      '1': 'Lawful'
+    };
+  
+    const outcomeLabels = {
+      '-1': 'Evil',
+      '0': 'Neutral',
+      '1': 'Good'
+    };
+  
+    function updateDecisionList(decisions) {
+      const choicesList = document.getElementById('choices-list');
+      if (!choicesList || !decisions) return;
+  
+      choicesList.innerHTML = '';
+  
+      decisions.forEach((decision, index) => {
+        if (typeof decision.alignment === 'number' && typeof decision.outcome === 'number') {
+          const li = document.createElement('li');
+          li.textContent = `Decision ${index + 1}: ${alignmentLabels[decision.alignment]} ${outcomeLabels[decision.outcome]}`;
+          choicesList.appendChild(li);
+        }
+      });
+    }
+  
+    // Load decisions from localStorage and show them
+    const saved = JSON.parse(localStorage.getItem('ninefold-progress'));
+    if (saved && saved.decisions) {
+      updateDecisionList(saved.decisions);
+    }
+  </script>
+  
+</body>
+</html>

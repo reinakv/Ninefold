@@ -1,0 +1,499 @@
+{
+  "intro": [
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>Hello, I am Detective Ward. We just picked you up from the Memorial Hospital. <br><br> <em>Your head is pounding as you digest what the man just told you<em><p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>The doctor claim you have retrograde amnesia.. Do you think you can tell me your name?<br><br> <em>You feel your mind scatter trying to find a name but it feels just out of reach<em><p>",
+      "action": "continue",
+      "buttonText": "I.... don't know.."
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "I thought so.. You're name is Marion. You are the owner of Neon Pulse, a very popular bar downtown.",
+      "action": "continue",
+      "buttonText": "Why am I here?"
+    },
+    {
+      "text": "About that.. Dr. Vaughn is dead.",
+      "action": "continue",
+      "buttonText": "Who?"
+    },
+    {
+      "text": "<P>A damned famous scientist - pioneered research on mechanical instruments. More importantly, a friend of yours.<br><br> <em>Vaughn sounded vaguely familar and yet you could not put a pin on it<em><p>",
+      "action": "continue"
+    },
+    {
+      "text": "He was found dead in your bar, you and three others were found unconscious next to him",
+      "action": "continue",
+      "buttonText": "WHAT?!"
+    },
+   {
+      "text": "Also, there was a poison compound that was found in his body. Your bloodwork report did not show anything. So you are safe",
+      "action": "continue",
+      "buttonText": "alright..."
+    },
+    {
+      "text": "I understand all of this is far too much for you to comprehend and understand all at once. But this is a high profile case that we want to keep moving, is there anything you can tell us?",
+      "action": "continue",
+      "nextDecision": "decision1"
+    }
+  ],
+  "decision1": {
+    "choices": [
+      {
+        "label": "I want to help. Tell me what you know.",
+        "alignment": 1,
+        "nextDecision": "lawfulPath"
+      },
+      {
+        "label": "I don’t remember much...",
+        "alignment": 0,
+        "nextDecision": "neutralPath"
+      },
+      {
+        "label": "I still do not understand why I am here? You’re wasting your time...",
+        "alignment": -1,
+        "nextDecision": "chaoticPath"
+      }
+    ]
+  },
+
+  "lawfulPath": {
+    "mapping": {
+      "1": "plotline1",
+      "0": "plotline2",
+      "-1": "plotline3"
+    }
+  },
+
+  "neutralPath": {
+    "mapping": {
+      "1": "plotline1",
+      "0": "plotline2",
+      "-1": "plotline3"
+    }
+  },
+
+  "chaoticPath": {
+    "mapping": {
+      "1": "plotline2", 
+      "0": "plotline3",
+      "-1": "plotline3"
+    }
+  },
+
+
+  
+  "plotline1": [
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p> You rolled a {roll}. <br><br><br> Wait here for a moment</p>",
+      "showRoll": true,
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "<p><em>Finally having a moment to think for yourself, you try and remember who Vaughn could be. Who could the three others be? <em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>What do you think this is? <br> <em> You examine the device kept in front of you and something stratches at the back of your mind.<em></p>",
+      "action": "continue",
+      "buttonText": "I don't think so"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "Listen to me very carefully. From what we understand, Dr. Vaughn was engaged in some unauthorized research",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "We don't know the scope of it yet but this device was found at the murder scene next to you",
+      "action": "continue",
+      "buttonText": "Could this have anything to do with my memories?"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "A Hypothesis. That's all we have regarding what happened to your memories. Once again, doctors say that it was blunt force trauma.",
+      "action": "continue",
+      "buttonText": "oh"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>We have already interrogated the others, Etta Moreau, Jonas Reyes and Silas Mercer <br><br> <em>As the detective rattled of these names, you could not help but feel a sense of familiarity<em><p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>Mr. Mercer was the one we cared about the most due to his expertise in mechanical stuff <br><br> <em>You could feel the detective trying to use that information to get something out of you. But you-<em><p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>Mr. Mercer was the one we cared about the most due to his expertise in mechanical stuff <br><br> <em>You could feel the detective trying to use that information to get something out of you. But you-<em><p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/backroom.png",
+      "text": "<p><em>You feel yourself getting pulled into a memory..<em> <br><br> I know it is risky but I trust you.<p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "Anyway, I understand all of this is too much for you. So, if anything comes up we'll reach out. Do not leave the state while the investigation is ongoing.",
+      "action": "continue",
+      "buttonText": "Alright"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "<em>What was that? A memory? Did you use that contraption? Is that why you lost your memory? Feeling dazed you walk out of the police station.<em>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/alleyway.png",
+      "text": "<em>One name stood out to you. Silas Mercer. Gut instinct told you that he would know what happened.. or at least help you piece something together. As you mulled the name Silas, something in you clicked and instictively you knew where to go.<em>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "Who's th-? Ah, it's you.",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "It was a matter of time before you wandered off here. I thought all of your memories were gone?",
+      "action": "continue",
+      "buttonText": "Yeah so?"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "So, nothing. What brings you here?",
+      "action": "continue",
+      "buttonText": "I thought, you would be able to help me"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "And why, pray tell, would I do that?",
+      "action": "continue",
+      "buttonText": "Because I have the feeling you know more than you are letting on"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "Of course I know more. He was OUR friend. But I am not going to sell him or the others out like that",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<em>He sighs, walks over to a worn drawer, and carefully pulls out a strange, mechanical device. It clicks softly in his hands.<em>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "This is what Vaughn was working on. He always said this would be the thing they remembered him for.",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "I didn’t think it would come to this. I thought he stopped it.",
+      "action": "continue",
+      "nextDecision": "decision2_silastudio"
+    }
+  ],
+
+  "decision2_silastudio": {
+    "choices": [
+      {
+        "label": "If I was responsible for this, I need to fix things",
+        "alignment": 1,
+        "nextDecision": "lawfulPath_2silas"
+      },
+      {
+        "label": "If we want the truth, we need to go to the detective—together.",
+        "alignment": 0,
+        "nextDecision": "neutralPath_2silas"
+      },
+      {
+        "label": "Help me, or I start talking — your name comes up first.",
+        "alignment": -1,
+        "nextDecision": "chaoticPath_2silas"
+      }
+    ]
+  },
+
+  "lawfulPath_2silas": {
+    "mapping": {
+      "1": "plotline1_2device",
+      "0": "plotline1_2device",
+      "-1": "plotline1_2bar"
+    }
+  },
+
+  "neutralPath_2silas": {
+    "mapping": {
+      "1": "earlyEnding1",
+      "0": "plotline1_2device",
+      "-1": "plotline1_2bar"
+    }
+  },
+
+  "chaoticPath_2silas": {
+    "mapping": {
+      "1": "plotline1_2device", 
+      "0": "plotline1_2bar",
+      "-1": "plotline1_2bar"
+    }
+  },
+
+  "earlyEnding1": [
+    {
+      "background": "backgrounds/studio.png",
+      "text": "Silas looks at you for a long moment, conflicted. Then he nods slowly.",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "“Alright. If there’s even a chance it helps… I’ll go with you.”",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "<em>You both head to the station. As soon as the device is presented, the atmosphere shifts. Officers glance at each other. The detective’s expression hardens.</em>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "“Where did you get this?” the detective asks sharply.",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "Silas remains silent. His jaw clenches.",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "“This device was active recently. You’re telling me you had no part in what happened to Vaughn?”",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "You watch as Silas refuses to defend himself—not out of guilt, but loyalty. He looks at you once. Then looks away.",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room.png",
+      "text": "“Silas Mercer, you’re under arrest for obstruction and suspected involvement in an ongoing investigation.”",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/black.png",
+      "text": "<em>The door closes behind him. Just like that, he’s gone.</em>",
+      "buttonText": "Continue",
+      "action": "redirect",
+      "url": "early-ending.html"
+    }
+  ],
+
+
+
+
+
+
+  "plotline2": [
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>You rolled a {roll}.<br> I understand you’ve been through a lot, but I don't have to sit here while you play games.</p>",
+      "showRoll": true,
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>Detective Ward stands up and walks toward the door. <em>You feel like you've hit a wall and the questions only multiply.</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p>He opens the door without looking back. “We’ll be in touch.” <em>Just like that, you’re out.</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/alleyway.png",
+      "text": "<p>You stumble outside into the cold night. The hospital wristband still clings to your arm. <br><em>The city hums — distant, indifferent. But something pulls you east. You just know where to go.</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>As you step inside, the air is thick with vinyl jazz and stale smoke. Behind the counter, a tall man in suspenders wipes a glass.</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>He sees you and pauses. “Well I’ll be... Look who finally woke up.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<em>His face feels familiar — warm, somehow. But the details are foggy.</em>",
+      "action": "continue",
+      "buttonText": "Jonas...?"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>“Rough couple days, huh?” Jonas leans against the counter. “Heard you were out cold. Sorry about Vaughn... Hell of a way to go.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<em>You feel a lump forming in your throat.</em>",
+      "action": "continue",
+      "buttonText": "What happened to me, Jonas?"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>He gives you a look — half pity, half confusion. “I was hopin’ you’d tell *me*.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<em>You pause. Something clicks. You own this place — there must be cameras.</em>",
+      "action": "continue",
+      "buttonText": "Wait. Don’t we have security footage?"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>“Yeah, yeah. We keep ‘em in the back.” Jonas calls over a young bartender. “Hey Mickey, go grab the tapes from that night, would ya?”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>You wait. The music plays on. Jonas lights a cigarette.</p>",
+      "action": "continue",
+      "buttonText": "You sure we even recorded that night?"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>“'Course you did. You've had that setup running since ’83.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>Mickey returns, empty-handed. “Uh… boss… The tapes are gone. Like, all of ‘em. Just static.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<em>Your stomach drops.</em>",
+      "action": "continue",
+      "buttonText": "What do you mean gone?"
+    },
+    {
+      "background": "backgrounds/bar.png",
+      "text": "<p>Jonas frowns. “Either someone messed with ‘em, or they were wiped clean. Ain’t no accident, I’ll tell you that.”</p>",
+      "action": "continue",
+      "nextDecision": "decision2_jonasbar"
+    }
+  ],
+
+  "decision2_jonasbar": {
+  "choices": [
+    {
+      "label": "We have to take the tapes to the cops.",
+      "alignment": 1,
+      "nextDecision": "lawfulPath_2jonas"
+    },
+    {
+      "label": "Let me look around some more.",
+      "alignment": 0,
+      "nextDecision": "neutralPath_2jonas"
+    },
+    {
+      "label": "I’m burning these tapes.",
+      "alignment": -1,
+      "nextDecision": "chaoticPath_2jonas"
+    }
+  ]
+},
+
+  "lawfulPath_2jonas": {
+    "mapping": {
+      "1": "earlyEnding2",
+      "0": "plotline2_2bar",
+      "-1": "plotline2_2silas"
+    }
+  },
+
+  "neutralPath_2jonas": {
+    "mapping": {
+      "1": "pplotline2_2bar",
+      "0": "plotline2_2bar",
+      "-1": "plotline2_2silas"
+    }
+  },
+
+  "chaoticPath_2jonas": {
+    "mapping": {
+      "1": "plotline2_2bar", 
+      "0": "plotline2_2silas",
+      "-1": "plotline2_2silas"
+    }
+  },
+
+  "earlyEnding2": [
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p><em>The detectives sit in front of you, their faces stern and unwavering. A long silence hangs in the air.</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p><em>Detective Ward looks at you with a hard stare, his voice cold and accusatory. “You’re the only one with the kind of access to the tapes. All evidence points to you tampering with them.”</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p><em>You try to protest, but the weight of the situation is heavy on your chest. The room feels suffocating as Detective Ward continues, “The case is closed. We can’t charge you with anything, but that doesn’t make you innocent.”</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p><em>You’re left with nothing but silence as they file out of the room. Your name is cleared, but the mystery surrounding Dr. Vaughn’s death remains unsolved. The weight of what happened is on your shoulders.</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p><em>As you sit there, the cold realization sinks in. The case may be closed, but for you, it’s far from over. The detectives may think you’re off the hook, but you know there’s more to this story.</em></p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p><em>But for now, there’s nothing you can do. The case is officially closed, and your story ends here. The truth, if it exists, remains hidden.</em></p>",
+      "buttonText": "Continue",
+      "action": "redirect",
+      "url": "early-ending.html"
+    }
+  ],
+
+
+
+
+  "plotline3": [
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "<p> You rolled a {roll}. <br>  Etta is waiting for you outside the station and takes you to the clockmaker’s workshop</p>",
+      "showRoll": true,
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
+      "text": "He opens his notepad. 'Let’s walk through what you remember.'",
+      "action": "continue",
+      "nextDecision": "decision2"
+    }
+  ]
+}
+

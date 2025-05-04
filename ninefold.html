@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ninefold</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+</head>
+<body>
+  <div id="game-container">
+    <!--<button onclick="resetStory()">Reset Story</button>-->
+    <img id="background" src="" alt="Scene Background">
+    <div id="overlay">
+      <div id="dice-area" style="width: 100px; height: 100px; display: none;"></div>
+      <div id="text-box"></div>
+      <div id="choices"></div>
+    </div>
+    <img id="scene-image" src="" onclick="togglePopup()" />
+    <div id="popup-box" style="display: none;"></div>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
