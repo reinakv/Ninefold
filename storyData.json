@@ -430,7 +430,7 @@
 
   "neutralPath_2jonas": {
     "mapping": {
-      "1": "pplotline2_2bar",
+      "1": "plotline2_2bar",
       "0": "plotline2_2bar",
       "-1": "plotline2_2silas"
     }
@@ -485,16 +485,187 @@
   "plotline3": [
     {
       "background": "backgrounds/interrogation_room_with_detective.png",
-      "text": "<p> You rolled a {roll}. <br>  Etta is waiting for you outside the station and takes you to the clockmaker’s workshop</p>",
+      "text": "<p>You rolled a {roll}.<br><br>The detective’s face shifts — the warmth is gone.</p>",
       "showRoll": true,
       "action": "continue"
     },
     {
       "background": "backgrounds/interrogation_room_with_detective.png",
-      "text": "He opens his notepad. 'Let’s walk through what you remember.'",
+      "text": "<p>“Alright, I’m done wasting my time.”<br><br>Ward snaps the file shut and glares at you. “You can go. You’re not under arrest — yet.”</p>",
       "action": "continue",
-      "nextDecision": "decision2"
+      "buttonText": "Seriously?"
+    },
+    {
+      "background": "backgrounds/alleyway.png",
+      "text": "<p>The officer at the door doesn’t look at you as you’re escorted out into the rain-slicked alley behind the station.</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/alleyway-with-etta.png",
+      "text": "<p>A silhouette leans against the brick wall, a cigarette glowing in the dim light.<br><br>“Knew you’d piss him off somehow,” she says, lips curling into a familiar smirk.</p>",
+      "action": "continue",
+      "buttonText": "Etta?"
+    },
+    {
+      "background": "backgrounds/alleyway-with-etta.png",
+      "text": "<p>She steps forward, brushing a strand of hair behind her ear. Her tone is soft, sultry.<br><br>“Still can’t remember a damn thing, huh?”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/alleyway-with-etta.png",
+      "text": "<p>You shake your head. She sighs, placing a gentle hand on your shoulder.<br><br>“It’s alright. Everything’s gonna be fine, Marion. You’ve been through worse.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/alleyway-with-etta.png",
+      "text": "<p>“Vaughn... he wasn’t just playing with wires and gears,” she murmurs. “He was into something darker. Unauthorized research — on memory manipulation.”</p>",
+      "action": "continue",
+      "buttonText": "What kind of research?"
+    },
+    {
+      "background": "backgrounds/alleyway-with-etta.png",
+      "text": "<p>She looks away. “I don’t know everything. But before he died, he kept saying someone was watching him. He was scared. Paranoid.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/alleyway-with-etta.png",
+      "text": "<p>“There’s someone who might know more,” she says, her voice dropping to a whisper. “Come on. I’ll take you to Silas. He worked with Vaughn... back before things got weird.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/alleyway.png",
+      "text": "<p>You and Etta wind your way through dim backstreets until she stops in front of an old wooden storefront. The sign above reads: <strong>‘Silas & Co. – Timepieces and Repairs’</strong>.</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>The inside is dim and cluttered — ticking clocks fill the silence. A tall man with grease-streaked hands looks up from a dismantled timepiece.</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>“Etta,” he says curtly, wiping his hands. His eyes land on you.<br><br>“And You. Well... damn.”</p>",
+      "action": "continue",
+      "buttonText": "Silas."
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>He walks closer, inspecting you quietly. “You really don’t remember, do you?”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>You shake your head. He nods slowly. “It’s a hell of a thing, losing someone like Vaughn.”<br><br>His voice cracks slightly. “We weren’t always on the best terms. But he was... family.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>“None of us ever expected this,” Etta murmurs. “He was brilliant, maybe a little broken... but he didn’t deserve this.”</p>",
+      "action": "continue",
+      "buttonText": "What was he working on? Something about... memory?"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>Silas stiffens. “Don’t dig. Not now. It won’t bring him back.”</p>",
+      "action": "continue",
+      "buttonText": "You know something."
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>“I said let it lie.”<br><br>Etta snorts. “Of course you’d say that. You were always too afraid to take responsibility.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>Silas glares at her. “I warned him. Over and over. But he wouldn’t listen.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>Etta crosses her arms. “Warned him and still let him spiral? That’s rich.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>“You think I didn’t try?” Silas snaps. “He shut everyone out. Whatever he was working on... it scared even him.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>You look between them, piecing together fragments. Vaughn, paranoia, secrecy. A machine that tampers with memory.</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>“He said someone was watching,” Etta mutters. “Started locking everything. Even the notes.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>“And you didn't think to tell me any of this?” you ask, your voice rising.</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>“We didn’t know what was real,” Silas says quietly. “Vaughn barely did.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>Etta’s eyes narrow. “He needed help. Instead, we argued, and now he’s gone.”</p>",
+      "action": "continue"
+    },
+    {
+      "background": "backgrounds/studio.png",
+      "text": "<p>You feel the weight of their guilt. But you also feel the missing pieces closing in, too many blanks, too many lies.</p>",
+      "action": "continue",
+      "nextDecision": "decision2_silasettastudio"
+    }       
+  ],
+
+  "decision2_silasettastudio": {
+    "choices": [
+      {
+        "label": "Vaughn was our friend. We need to be honest with each other.",
+        "alignment": 1,
+        "nextDecision": "lawfulPath_2silasetta"
+      },
+      {
+        "label": "This feels off. Someone set us up, and I’ll find out who.",
+        "alignment": 0,
+        "nextDecision": "neutralPath_2silasetta"
+      },
+      {
+        "label": "Tell me everything. Or I take you both to the cops.",
+        "alignment": -1,
+        "nextDecision": "chaoticPath_2silasetta"
+      }
+    ]
+  },
+
+  "lawfulPath_2silasetta": {
+    "mapping": {
+      "1": "plotline3_2bar",
+      "0": "plotline3_2bar",
+      "-1": "plotline3_2backroom"
     }
-  ]
+  },
+
+  "neutralPath_2silasetta": {
+    "mapping": {
+      "1": "plotline3_2bar",
+      "0": "plotline3_2backroom",
+      "-1": "plotline3_2backroom"
+    }
+  },
+
+  "chaoticPath_2silasetta": {
+    "mapping": {
+      "1": "plotline3_2bar", 
+      "0": "plotline3_2backroom",
+      "-1": "earlyEnding3"
+    }
+}
+
 }
 
