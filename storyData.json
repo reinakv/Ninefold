@@ -13,11 +13,12 @@
     },
     {
       "background": "backgrounds/interrogation_room_with_detective.png",
-      "text": "I thought so.. You're name is Marion. You are the owner of Neon Pulse, a very popular bar downtown.",
+      "text": "I thought so.. You are the owner of Neon Pulse, a very popular bar downtown.",
       "action": "continue",
       "buttonText": "Why am I here?"
     },
     {
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "About that.. Dr. Vaughn is dead.",
       "action": "continue",
       "buttonText": "Who?"
@@ -28,16 +29,19 @@
       "action": "continue"
     },
     {
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "He was found dead in your bar, you and three others were found unconscious next to him",
       "action": "continue",
       "buttonText": "WHAT?!"
     },
    {
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "Also, there was a poison compound that was found in his body. Your bloodwork report did not show anything. So you are safe",
       "action": "continue",
       "buttonText": "alright..."
     },
     {
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "I understand all of this is far too much for you to comprehend and understand all at once. But this is a high profile case that we want to keep moving, is there anything you can tell us?",
       "action": "continue",
       "nextDecision": "decision1"
@@ -140,7 +144,7 @@
       "action": "continue"
     },
     {
-      "background": "backgrounds/backroom.png",
+      "background": "backgrounds/memory_backroom_with_vaughn.png",
       "text": "<p><em>You feel yourself getting pulled into a memory..<em> <br><br> I know it is risky but I trust you.<p>",
       "action": "continue"
     },
@@ -166,40 +170,40 @@
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "It was a matter of time before you wandered off here. I thought all of your memories were gone?",
       "action": "continue",
       "buttonText": "Yeah so?"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "So, nothing. What brings you here?",
       "action": "continue",
       "buttonText": "I thought, you would be able to help me"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "And why, pray tell, would I do that?",
       "action": "continue",
       "buttonText": "Because I have the feeling you know more than you are letting on"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "Of course I know more. He was OUR friend. But I am not going to sell him or the others out like that",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "<em>He sighs, walks over to a worn drawer, and carefully pulls out a strange, mechanical device. It clicks softly in his hands.<em>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "This is what Vaughn was working on. He always said this would be the thing they remembered him for.",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "I didn’t think it would come to this. I thought he stopped it.",
       "action": "continue",
       "nextDecision": "decision2_silastudio"
@@ -252,47 +256,47 @@
 
   "earlyEnding1": [
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "Silas looks at you for a long moment, conflicted. Then he nods slowly.",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "“Alright. If there’s even a chance it helps… I’ll go with you.”",
       "action": "continue"
     },
     {
-      "background": "backgrounds/interrogation_room.png",
+      "background": "backgrounds/studio_with_silas.png",
       "text": "<em>You both head to the station. As soon as the device is presented, the atmosphere shifts. Officers glance at each other. The detective’s expression hardens.</em>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/interrogation_room.png",
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "“Where did you get this?” the detective asks sharply.",
       "action": "continue"
     },
     {
-      "background": "backgrounds/interrogation_room.png",
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "Silas remains silent. His jaw clenches.",
       "action": "continue"
     },
     {
-      "background": "backgrounds/interrogation_room.png",
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "“This device was active recently. You’re telling me you had no part in what happened to Vaughn?”",
       "action": "continue"
     },
     {
-      "background": "backgrounds/interrogation_room.png",
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "You watch as Silas refuses to defend himself—not out of guilt, but loyalty. He looks at you once. Then looks away.",
       "action": "continue"
     },
     {
-      "background": "backgrounds/interrogation_room.png",
+      "background": "backgrounds/interrogation_room_with_detective.png",
       "text": "“Silas Mercer, you’re under arrest for obstruction and suspected involvement in an ongoing investigation.”",
       "action": "continue"
     },
     {
-      "background": "backgrounds/black.png",
+      "background": "backgrounds/interrogation_room.png",
       "text": "<em>The door closes behind him. Just like that, he’s gone.</em>",
       "buttonText": "Continue",
       "action": "redirect",
@@ -333,67 +337,67 @@
       "action": "continue"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>He sees you and pauses. “Well I’ll be... Look who finally woke up.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<em>His face feels familiar — warm, somehow. But the details are foggy.</em>",
       "action": "continue",
       "buttonText": "Jonas...?"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>“Rough couple days, huh?” Jonas leans against the counter. “Heard you were out cold. Sorry about Vaughn... Hell of a way to go.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<em>You feel a lump forming in your throat.</em>",
       "action": "continue",
       "buttonText": "What happened to me, Jonas?"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>He gives you a look — half pity, half confusion. “I was hopin’ you’d tell *me*.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<em>You pause. Something clicks. You own this place — there must be cameras.</em>",
       "action": "continue",
       "buttonText": "Wait. Don’t we have security footage?"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>“Yeah, yeah. We keep ‘em in the back.” Jonas calls over a young bartender. “Hey Mickey, go grab the tapes from that night, would ya?”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>You wait. The music plays on. Jonas lights a cigarette.</p>",
       "action": "continue",
       "buttonText": "You sure we even recorded that night?"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>“'Course you did. You've had that setup running since ’83.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>Mickey returns, empty-handed. “Uh… boss… The tapes are gone. Like, all of ‘em. Just static.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<em>Your stomach drops.</em>",
       "action": "continue",
       "buttonText": "What do you mean gone?"
     },
     {
-      "background": "backgrounds/bar.png",
+      "background": "backgrounds/bar_with_joe.png",
       "text": "<p>Jonas frowns. “Either someone messed with ‘em, or they were wiped clean. Ain’t no accident, I’ll tell you that.”</p>",
       "action": "continue",
       "nextDecision": "decision2_jonasbar"
@@ -472,7 +476,7 @@
     },
     {
       "background": "backgrounds/interrogation_room_with_detective.png",
-      "text": "<p><em>But for now, there’s nothing you can do. The case is officially closed, and your story ends here. The truth, if it exists, remains hidden.</em></p>",
+      "text": "<p><em>But for now, there’s nothing you can do.</em></p>",
       "buttonText": "Continue",
       "action": "redirect",
       "url": "early-ending.html"
@@ -513,7 +517,7 @@
     },
     {
       "background": "backgrounds/alleyway-with-etta.png",
-      "text": "<p>You shake your head. She sighs, placing a gentle hand on your shoulder.<br><br>“It’s alright. Everything’s gonna be fine, Marion. You’ve been through worse.”</p>",
+      "text": "<p>You shake your head. She sighs, placing a gentle hand on your shoulder.<br><br>“It’s alright. Everything’s gonna be fine. You’ve been through worse.”</p>",
       "action": "continue"
     },
     {
@@ -543,80 +547,81 @@
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>“Etta,” he says curtly, wiping his hands. His eyes land on you.<br><br>“And You. Well... damn.”</p>",
       "action": "continue",
       "buttonText": "Silas."
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>He walks closer, inspecting you quietly. “You really don’t remember, do you?”</p>",
+      "action": "continue",
+      "buttonText": "no"
+    },
+    {
+      "background": "backgrounds/studio_with_silas_and_etta.png",
+      "text": "<p> He nods slowly. “It’s a hell of a thing, losing someone like Vaughn.”<br><br>His voice cracks slightly. “We weren’t always on the best terms. But he was... family.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
-      "text": "<p>You shake your head. He nods slowly. “It’s a hell of a thing, losing someone like Vaughn.”<br><br>His voice cracks slightly. “We weren’t always on the best terms. But he was... family.”</p>",
-      "action": "continue"
-    },
-    {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>“None of us ever expected this,” Etta murmurs. “He was brilliant, maybe a little broken... but he didn’t deserve this.”</p>",
       "action": "continue",
       "buttonText": "What was he working on? Something about... memory?"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>Silas stiffens. “Don’t dig. Not now. It won’t bring him back.”</p>",
       "action": "continue",
       "buttonText": "You know something."
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>“I said let it lie.”<br><br>Etta snorts. “Of course you’d say that. You were always too afraid to take responsibility.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>Silas glares at her. “I warned him. Over and over. But he wouldn’t listen.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>Etta crosses her arms. “Warned him and still let him spiral? That’s rich.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>“You think I didn’t try?” Silas snaps. “He shut everyone out. Whatever he was working on... it scared even him.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>You look between them, piecing together fragments. Vaughn, paranoia, secrecy. A machine that tampers with memory.</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>“He said someone was watching,” Etta mutters. “Started locking everything. Even the notes.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>“And you didn't think to tell me any of this?” you ask, your voice rising.</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>“We didn’t know what was real,” Silas says quietly. “Vaughn barely did.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>Etta’s eyes narrow. “He needed help. Instead, we argued, and now he’s gone.”</p>",
       "action": "continue"
     },
     {
-      "background": "backgrounds/studio.png",
+      "background": "backgrounds/studio_with_silas_and_etta.png",
       "text": "<p>You feel the weight of their guilt. But you also feel the missing pieces closing in, too many blanks, too many lies.</p>",
       "action": "continue",
       "nextDecision": "decision2_silasettastudio"
